@@ -24,7 +24,7 @@ flat_data = digit_data.images.reshape((len(digit_data.images), -1))
 
 classifier = svm.SVC(gamma=0.001)
 
-train_test_split = int(len(digit_data.images) * 0.8)
+train_test_split = int(len(digit_data.images) * 0.75)
 classifier.fit(flat_data[:train_test_split], digit_data.target[:train_test_split])
 
 target_value = digit_data.target[train_test_split:]
